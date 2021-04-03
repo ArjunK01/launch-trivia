@@ -1,5 +1,6 @@
 import React,{useEffect, useState} from 'react'
 
+
 const Question = ({ question }) => {
     let [answers, setAnswers] = useState([])
 
@@ -24,7 +25,12 @@ const Question = ({ question }) => {
     return (
         <div>
             <h2>{question.question}</h2>
-            {answers.map(a => <div onClick={() => ! selected ? setSelected(a) : null}><h4 style={{color: selected ? (selected === a ? (a === question.correct_answer ? "green" : "red"): "black"): "black"}}>{a}</h4></div>)}
+            {answers.map(a => 
+                <div onClick={() => ! selected ? setSelected(a) : null}>
+                    <h4 style={{color: selected ? (selected === a ? (a === question.correct_answer ? "green" : "red"): "gray"): "black"}}>
+                        {a}
+                    </h4>
+                </div>)}
         </div>
     )
 }
