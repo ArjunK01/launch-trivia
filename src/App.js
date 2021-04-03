@@ -1,5 +1,6 @@
 import './App.css';
 import {useState, useEffect} from 'react'
+import Question from './Components/Question';
 
 function App() {
 
@@ -11,7 +12,7 @@ function App() {
 
   return (
     <div>
-      {questions.map(q => <h2>{q.question}</h2>)}
+      {questions.map(q => <Question question={q} />)}
     </div>
   );
 }
