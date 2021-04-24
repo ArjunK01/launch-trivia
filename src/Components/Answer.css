@@ -1,0 +1,14 @@
+.ans {
+    width: 100%;
+    border: 1px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+    border-radius: 2px;
+}
+
+.h4 {
+    padding: 0;
+}
